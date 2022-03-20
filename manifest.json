@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "美图秀秀网页版免vip下载",
+	"version": "1.0.0",
+	"description": "美图秀秀网页版免vip下载，而且去掉meitu水印",
+	"author": "Hedgehog",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"page_action":
+	{
+		"default_icon": "icon.png"
+	},
+	"web_accessible_resources":
+	[
+		"hack/chunk-2b1dc28d.8cd76318.js",
+		"hack/chunk-f2b7093c.65d3da61.js",
+		"hack/chunk-6d64e948.e7973550.js"
+	],
+	"permissions":
+	[
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"https://pc.meitu.com/*"
+	],
+  "background": {
+     "persistent": true,
+		 "scripts": ["./background.js"]
+  }
+}
