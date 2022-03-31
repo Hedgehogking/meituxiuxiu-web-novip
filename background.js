@@ -1,8 +1,9 @@
 var arr = [
-  'chunk-2b1dc28d.8cd76318.js',
-  'chunk-f2b7093c.65d3da61.js',
-  'chunk-6d64e948.e7973550.js',
+  'chunk-2b1dc28d',
+  'chunk-6d64e948',
+  'chunk-f2b7093c',
 ]
+// onResponseStarted
 chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
     var url = details.url;
@@ -14,6 +15,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       }
     })
     if (tmpFile) {
+      // console.log(chrome);
       console.log("match file => " + tmpFile);
       chrome.notifications.create(null, {
         type: 'basic',
@@ -22,7 +24,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         message: '可以去掉"meitu"水印并免VIP下载'
       });
     }
-    url = tmpFile ? chrome.extension.getURL("hack/" + tmpFile) : url;
+    url = tmpFile ? chrome.extension.getURL("hack/" + tmpFile + '.js') : url;
     return {redirectUrl: url};
   },
   {

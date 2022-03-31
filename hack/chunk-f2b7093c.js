@@ -359,7 +359,7 @@
             }, [e._v("\n              背景颜色\n            ")]), i("div", [e._v("\n              " + e._s(e.backgroundColorName) + "\n              "), e.store.config.backgroundLayer.backgroundColor.value ? e._e() : i("span", [e._v("\n                " + e._s("image/jpeg" === e.downLoadFrom.type ? "（JPG格式不支持透明背景，文件体积较大）" : "（PNG格式支持透明背景，文件体积较大）") + "\n              ")])])])]), i("div", {
                 staticClass: "save-button",
                 on: {
-                    click: e.downloadIamgeBefore
+                    click: e.downloadIamge
                 }
             }, [e._v("\n          确认保存\n        ")])], 1)]), i("div", {
                 staticClass: "modal-bg",
@@ -503,15 +503,15 @@
                     return n / 1024
                 },
                 async downloadIamgeBefore() {
-                    // if (this.$track("zjzsj_download_confirm_click", this.downloadTrackParams()),
-                    // !window.userInfo.id)
-                    //     return void window.openLogin();
-                    // const {data: e} = await Object(h["k"])();
-                    // if (!e.is_vip)
-                    //     return this.$track("novip_download_show", {
-                    //         source: "zjzsj"
-                    //     }),
-                    //     void (this.tipVisible = !0);
+                    if (this.$track("zjzsj_download_confirm_click", this.downloadTrackParams()),
+                    !window.userInfo.id)
+                        return void window.openLogin();
+                    const {data: e} = await Object(h["k"])();
+                    if (!e.is_vip)
+                        return this.$track("novip_download_show", {
+                            source: "zjzsj"
+                        }),
+                        void (this.tipVisible = !0);
                     this.downloadIamge()
                 },
                 tipConfirmFunction() {
@@ -1548,7 +1548,7 @@
     },
     "3c92": function(e, t, i) {},
     "3d6b": function(e, t, i) {
-        e.exports = i.p + "img/watermark.hello.png"
+        e.exports = i.p + "img/watermark.png"
     },
     "3d8a": function(e, t, i) {
         "use strict";
@@ -4349,7 +4349,7 @@
                 }
                 ),
                 Object(h["b"])(()=>{
-                    this.store.isVip = !0,
+                    this.store.isVip = !1,
                     this.store.changeWatermark()
                 }
                 )
@@ -5232,4 +5232,4 @@
         i("2716")
     }
 }]);
-//# sourceMappingURL=chunk-f2b7093c.65d3da61.js.map
+//# sourceMappingURL=chunk-f2b7093c.8e964ded.js.map

@@ -52,7 +52,7 @@
                     disabled: !t.resultImageObj
                 },
                 on: {
-                    click: t.downloadIamgeBefore
+                    click: t.downloadIamge
                 }
             }, [i("svg-icon", {
                 attrs: {
@@ -588,7 +588,7 @@
                         var e, i, n = this;
                         return regeneratorRuntime.wrap((function(t) {
                             while (1)
-                                switch (10) {
+                                switch (t.prev = t.next) {
                                 case 0:
                                     if (window.userInfo.id) {
                                         t.next = 3;
@@ -1396,4 +1396,4 @@
         }
     }
 }]);
-//# sourceMappingURL=chunk-6d64e948.e7973550.js.map
+//# sourceMappingURL=chunk-6d64e948.c7d81ca2.js.map

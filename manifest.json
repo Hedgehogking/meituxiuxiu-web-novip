@@ -15,9 +15,7 @@
 	},
 	"web_accessible_resources":
 	[
-		"hack/chunk-2b1dc28d.8cd76318.js",
-		"hack/chunk-f2b7093c.65d3da61.js",
-		"hack/chunk-6d64e948.e7973550.js"
+		"hack/*.js"
 	],
 	"permissions":
 	[
